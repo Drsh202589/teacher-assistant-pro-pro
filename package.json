@@ -1,0 +1,18 @@
+{
+  "name": "teacher-helper-mostafa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cp contacts-plugin/plugin.js www/phone-contacts-plugin.js && echo static-web-ready",
+    "android:sync": "npx cap sync android",
+    "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3",
+    "@mostafaelderey/phone-contacts": "file:./contacts-plugin"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/android": "^7.4.3"
+  }
+}

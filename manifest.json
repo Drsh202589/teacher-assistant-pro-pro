@@ -1,0 +1,11 @@
+{
+  "name": "مساعد المدرس الذكي PRO — مصطفى الديري",
+  "short_name": "مساعد المدرس الذكي",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "theme_color": "#16213a",
+  "background_color": "#f5f7fb",
+  "icons": []
+}

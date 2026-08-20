@@ -1,0 +1,8 @@
+{
+  "appId": "com.mostafaelderey.teacherhelper",
+  "appName": "مساعد المدرس الذكي",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
