@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cp contacts-plugin/plugin.js www/phone-contacts-plugin.js && echo static-web-ready",
+    "build": "cp phone-contacts-plugin.js www/phone-contacts-plugin.js && echo static-web-ready", 
     "android:sync": "npx cap sync android",
     "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug"
   },
