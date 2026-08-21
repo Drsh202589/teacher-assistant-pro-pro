@@ -1,5 +1,10 @@
 {
   "name": "@mostafaelderey/phone-contacts",
   "version": "1.0.0",
-  "main": "index.js"
+  "main": "index.js",
+  "capacitor": {
+    "android": {
+      "src": "android"
+    }
+  }
 }
