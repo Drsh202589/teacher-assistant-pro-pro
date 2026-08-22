@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.mostafaelderey.phonecontacts'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 23
+    }
+}
