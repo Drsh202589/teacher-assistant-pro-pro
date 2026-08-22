@@ -1,7 +1,7 @@
-import { registerPlugin } from '@capacitor/core';
+(function () {
+  const capacitor = window.Capacitor;
 
-export const PhoneContacts = registerPlugin('PhoneContacts', {
-  web: () => ({
+  const webImplementation = () => ({
     async pickPhoneContact() {
       if (navigator.contacts && typeof navigator.contacts.select === 'function') {
         const selected = await navigator.contacts.select(['name', 'tel'], { multiple: false });
@@ -12,7 +12,11 @@ export const PhoneContacts = registerPlugin('PhoneContacts', {
       }
       throw new Error('CONTACT_PICKER_UNAVAILABLE');
     }
-  })
-});
+  });
 
-if (typeof window !== 'undefined') window.PhoneContacts = PhoneContacts;
+  const PhoneContacts = capacitor && typeof capacitor.registerPlugin === 'function'
+    ? capacitor.registerPlugin('PhoneContacts', { web: webImplementation })
+    : { pickPhoneContact: webImplementation().pickPhoneContact };
+
+  window.PhoneContacts = PhoneContacts;
+})();
