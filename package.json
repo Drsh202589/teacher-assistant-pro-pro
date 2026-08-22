@@ -1,10 +1,17 @@
 {
-  "name": "@mostafaelderey/phone-contacts",
-  "version": "1.1.0",
-  "main": "index.js",
-  "capacitor": {
-    "android": {
-      "src": "android"
-    }
+  "name": "teacher-helper-mostafa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf www && mkdir -p www && cp index.html www/index.html && cp phone-contacts-plugin.js www/phone-contacts-plugin.js && test -f www/index.html && test -f www/phone-contacts-plugin.js && echo static-web-ready",
+    "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3",
+    "@mostafaelderey/phone-contacts": "file:./contacts-plugin"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/android": "^7.4.3"
   }
 }
